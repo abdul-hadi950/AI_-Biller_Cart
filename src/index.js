@@ -3,8 +3,16 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import products from './components/products';
+
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
+if (module.hot) {
+  module.hot.accept(products, () => {
+    // Reload the page
+    window.location.reload();
+  });
+}
 root.render(
   <React.StrictMode>
     <App />

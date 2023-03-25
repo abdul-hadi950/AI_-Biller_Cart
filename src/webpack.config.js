@@ -1,0 +1,3 @@
+devServer: {
+    hot: true
+  }
